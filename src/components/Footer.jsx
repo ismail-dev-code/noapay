@@ -6,7 +6,7 @@ const Footer = () => {
     <>
     <footer className="footer sm:footer-horizontal bg-base-200 text-base-content p-10 pb-3">
       <aside>
-       <img src={footerLogo} alt="" />
+       <img src={footerLogo} alt="footerLogo" />
         <p>
           <strong>NoaPay</strong> Solutions Ltd.
           <br />
