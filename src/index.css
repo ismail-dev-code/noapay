@@ -1,2 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
 @import "tailwindcss";
 @plugin "daisyui";
+
+@plugin "daisyui/theme" {
+  name: "winter";
+  default: true;
+  --color-primary: #14b8a6;
+  --color-secondary: #e5e7eb;
+  --color-accent: #93c5fd;
+  --color-success: #36d399;
+  --color-warning: #fbbd23;
+  --color-error: #f87272;
+  --color-base-100: #f9fafb;
+}
+
+* {
+  font-family: "Nunito", sans-serif;
+}
+
+a.active{
+ @apply bg-success text-white
+}

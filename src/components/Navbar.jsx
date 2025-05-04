@@ -1,22 +1,28 @@
 import React from "react";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
+import logoImg from "../assets/noapay-logo.png";
 
 const Navbar = () => {
   const links = (
     <>
       <li>
-        <Link to={"/"}>Home</Link>
+        <NavLink className={"mr-5"} to={"/"}>
+          Home
+        </NavLink>
       </li>
       <li>
-        <Link to={"/bills"}>Bills</Link>
+        <NavLink className={"mr-5"} to={"/bills"}>
+          Bills
+        </NavLink>
       </li>
       <li>
-        <Link to={"/profile"}>Profile</Link>
+        <NavLink to={"/profile"}>Profile</NavLink>
       </li>
     </>
   );
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <header className="border-b border-gray-300">
+        <div className="navbar lg:w-11/12 lg:mx-auto">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -43,22 +49,23 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">PayKar</a>
+        <Link to={"/"}>
+          <img className="hidden md:block h-10 w-24" src={logoImg} alt="logo" />
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          {links}
-        </ul>
+        <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end">
-        <Link to={"/login"} className="btn">
+        <Link to={"/login"} className="btn bg-success mr-4 text-white">
           Login
         </Link>
-        <Link to={"/register"} className="btn">
+        <Link to={"/register"} className="btn bg-success text-white">
           Register
         </Link>
       </div>
     </div>
+    </header>
   );
 };
 
