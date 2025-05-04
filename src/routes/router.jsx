@@ -6,6 +6,7 @@ import Profile from "../pages/Profile";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
 
+
 export const router = createBrowserRouter([
   {
     path: "/",
