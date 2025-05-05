@@ -5,7 +5,7 @@ import Bills from "../pages/Bills";
 import Profile from "../pages/Profile";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
-
+import PrivateRoute from "../provider/PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -18,11 +18,19 @@ export const router = createBrowserRouter([
       },
       {
         path: "/bills",
-        element: <Bills />,
+        element: (
+          <PrivateRoute>
+            <Bills />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/profile",
-        element: <Profile />,
+        element: (
+          <PrivateRoute>
+            <Profile />
+          </PrivateRoute>
+        ),
       },
     ],
   },
