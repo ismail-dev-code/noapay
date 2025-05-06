@@ -8,7 +8,7 @@ import slideImg2 from "../assets/sld41.png";
 import slideImg3 from "../assets/slide2.jpg";
 
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import { FaHandPointUp, FaLock } from "react-icons/fa";
+import { FaHandPointUp, FaLock, FaQuoteLeft } from "react-icons/fa";
 import { IoArrowRedoSharp } from "react-icons/io5";
 import { TbCoinTakaFilled } from "react-icons/tb";
 import { TiTick } from "react-icons/ti";
@@ -32,7 +32,9 @@ const Home = () => {
             away.
           </p>
 
-          <button className="btn bg-primary text-white">Bills</button>
+          <Link to={"/bills"} className="btn bg-primary text-white">
+            Bills
+          </Link>
         </div>
 
         <div className="flex-1 w-full max-w-xl">
@@ -152,9 +154,89 @@ const Home = () => {
               anytime.
             </li>
           </ol>
-          <Link to={"/register"} className="btn-success btn md:mt-6 mt-3 text-sm text-white">
+          <Link
+            to={"/register"}
+            className="btn-success btn md:mt-6 mt-3 text-sm text-white"
+          >
             Open a Free Account
           </Link>
+        </div>
+      </div>
+      <div className="text-center md:p-0 p-8 mt-8 md:mt-24">
+        <h1 className="md:text-4xl text-2xl font-bold mb-1.5 md:mb-3">
+          What Our Users Think About NoaPay
+        </h1>
+        <p className="text-gray-500 md:mb-6 mb-3 w-full md:w-2/4 mx-auto">
+          Hear directly from our users how NoaPay has made bill payments easier,
+          faster, and stress-free. Trusted by individuals and families across
+          the country.
+        </p>
+        <div className="mx-auto w-full my-10 md:my-20">
+          <Swiper
+            modules={[Autoplay]}
+            spaceBetween={30}
+            autoplay={{ delay: 4000 }}
+            loop={true}
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+            }}
+          >
+            <SwiperSlide>
+              <div className="flex flex-col items-center justify-center space-y-2 p-6 shadow-md rounded-xl bg-white">
+                <FaQuoteLeft className="text-success text-center" size={40} />
+                <p className="text-gray-500 text-center">
+                  "NoaPay is a lifesaver! As a busy freelancer, it helps me stay
+                  organized and pay on time without hassle."
+                </p>
+                <h6 className="font-bold">Jhankar Mahbub</h6>
+                <h5>Founder & CEO, Programming Hero</h5>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="flex flex-col items-center justify-center space-y-2 p-6 shadow-md rounded-xl bg-white">
+                <FaQuoteLeft className="text-success text-center" size={40} />
+                <p className="text-gray-500 text-center">
+                  "I love how NoaPay sends timely reminders. Now I’m always on
+                  track with my utility payments."
+                </p>
+                <h6 className="font-bold">Razia Sultana</h6>
+                <h5>Teacher, Dhaka Public School</h5>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="flex flex-col items-center justify-center space-y-2 p-6 shadow-md rounded-xl bg-white">
+                <FaQuoteLeft className="text-success text-center" size={40} />
+                <p className="text-gray-500 text-center">
+                  "NoaPay made bill payments so easy and stress-free. The
+                  interface is modern and simple."
+                </p>
+                <h6 className="font-bold">Robert Banabus</h6>
+                <h5>Software Engineer, CodeHive</h5>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="flex flex-col items-center justify-center space-y-2 p-6 shadow-md rounded-xl bg-white">
+                <FaQuoteLeft className="text-success text-center" size={40} />
+                <p className="text-gray-500 text-center">
+                  "Great platform! Everything is smooth, from adding bill info
+                  to making payments securely."
+                </p>
+                <h6 className="font-bold">Faisal Haque</h6>
+                <h5>Bank Officer, Eastern Bank Ltd.</h5>
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
     </>
