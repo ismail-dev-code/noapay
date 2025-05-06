@@ -6,6 +6,7 @@ import Profile from "../pages/Profile";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
 import PrivateRoute from "../provider/PrivateRoute";
+import Loading from "../pages/Loading";
 
 export const router = createBrowserRouter([
   {
@@ -18,6 +19,8 @@ export const router = createBrowserRouter([
       },
       {
         path: "/bills",
+        loader: () => fetch("/bills.json"),
+        hydrateFallbackElement: <Loading />,
         element: (
           <PrivateRoute>
             <Bills />

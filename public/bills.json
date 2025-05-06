@@ -1,0 +1,99 @@
+[
+  {
+    "id": 1,
+    "bill_type": "electricity",
+    "icon": "https://i.ibb.co.com/HLxyzvr0/pdb-s.png",
+    "organization": "PDB",
+    "amount": 1890,
+    "due_date": "2025-May-22"
+  },
+  {
+    "id": 2,
+    "bill_type": "electricity",
+    "icon": "https://i.ibb.co.com/99FRxG18/nesco.png",
+    "organization": "NESCO",
+    "amount": 1488,
+    "due_date": "2025-May-28"
+  },
+  {
+    "id": 3,
+    "bill_type": "internet",
+    "icon": "https://i.ibb.co.com/s9rqvDXR/bdcoms.jpg",
+    "organization": "Link3",
+    "amount": 1200,
+    "due_date": "2025-May-05"
+  },
+  {
+    "id": 4,
+    "bill_type": "water",
+    "icon": "https://i.ibb.co.com/Y689hvf/wasa.jpg",
+    "organization": "WASA",
+    "amount": 850,
+    "due_date": "2025-May-07"
+  },
+  {
+    "id": 5,
+    "bill_type": "credit_card_bill",
+    "icon": "https://i.ibb.co.com/fYYN5SkY/images.jpg",
+    "organization": "Dutch-Bangla Bank",
+    "amount": 4600,
+    "due_date": "2025-May-10"
+  },
+  {
+    "id": 6,
+    "bill_type": "tuition",
+    "icon": "https://i.ibb.co.com/4wK04XR7/images-1.jpg",
+    "organization": "Sunrise Public School",
+    "amount": 2500,
+    "due_date": "2025-May-15"
+  },
+
+  {
+    "id": 7,
+    "bill_type": "electricity",
+    "icon": "https://i.ibb.co.com/YTLm93q6/wapda-s.jpg",
+    "organization": "WAPDA",
+    "amount": 2100,
+    "due_date": "2025-May-20"
+  },
+  {
+    "id": 8,
+    "bill_type": "gas",
+    "icon": "https://i.ibb.co.com/Dg5xnFRP/tista.jpg",
+    "organization": "Bakhrabad Gas",
+    "amount": 1350,
+    "due_date": "2025-May-22"
+  },
+  {
+    "id": 9,
+    "bill_type": "internet",
+    "icon": "https://i.ibb.co.com/s9rqvDXR/bdcoms.jpg",
+    "organization": "BDCOM Online",
+    "amount": 1450,
+    "due_date": "2025-May-25"
+  },
+  {
+    "id": 10,
+    "bill_type": "credit_card_bill",
+    "icon": "https://i.ibb.co.com/kgck9Kxj/Credit-Card-jpg.webp",
+    "organization": "City Bank",
+    "amount": 3780,
+    "due_date": "2025-May-28"
+  },
+  {
+    "id": 11,
+    "bill_type": "tuition",
+    "icon": "https://i.ibb.co.com/5gFWQpbD/images.png",
+    "organization": "Greenfield College",
+    "amount": 3200,
+    "due_date": "2025-May-30"
+  },
+  {
+    "id": 12,
+    "bill_type": "water",
+    "icon": "https://i.ibb.co.com/spnxC0hh/wasa.png",
+    "organization": "WASA",
+    "amount": 900,
+    "due_date": "2025-May-01"
+  }
+]
