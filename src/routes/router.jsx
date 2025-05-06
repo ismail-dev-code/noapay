@@ -30,6 +30,16 @@ export const router = createBrowserRouter([
         ),
       },
       {
+        path: "/bills/:id",
+        element: (
+          <PrivateRoute>
+            <BillsDetails></BillsDetails>
+          </PrivateRoute>
+        ),
+        loader: () => fetch("/bills.json"),
+        hydrateFallbackElement: <Loading />,
+      },
+      {
         path: "/profile",
         element: (
           <PrivateRoute>
@@ -47,12 +57,6 @@ export const router = createBrowserRouter([
     path: "/register",
     element: <Register />,
   },
-  {
-    path: "/bills/:id",
-    element: <BillsDetails></BillsDetails>,
-    loader: () => fetch("/bills.json"),
-  },
-  { path: "/*", 
-    element: <ErrorPage></ErrorPage> ,
-  },
+
+  { path: "/*", element: <ErrorPage></ErrorPage> },
 ]);

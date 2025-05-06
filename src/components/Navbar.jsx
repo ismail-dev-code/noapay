@@ -1,12 +1,14 @@
-import React, { use } from "react";
+import React, { use} from "react";
 import { Link, NavLink } from "react-router";
 import logoImg from "../assets/noapay-logo.png";
 import userImg from "../assets/user.png";
 import { AuthContext } from "../provider/AuthProvider";
 
 const Navbar = () => {
-  const { user, logOut } = use(AuthContext);
+  const { user, logOut, amount } = use(AuthContext);
   
+  
+
   const handleLogOut = () => {
     logOut()
       .then(() => {
@@ -33,6 +35,7 @@ const Navbar = () => {
       </li>
     </>
   );
+ 
   return (
     <header className="border-b border-gray-300">
       <div className="navbar lg:w-11/12 lg:mx-auto">
@@ -90,7 +93,7 @@ const Navbar = () => {
                   className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
                 >
                   <li>
-                    <button>credits: 11000</button>
+                    <button>Credits: {amount}</button>
                   </li>
                   <li>
                     <button onClick={handleLogOut}>Logout</button>

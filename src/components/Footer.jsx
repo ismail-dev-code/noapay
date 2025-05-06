@@ -39,7 +39,7 @@ const Footer = () => {
       
     </footer>
     <aside>
-    <p className="bg-base-200 text-base-content text-center"><small>Copyright © {new Date().getFullYear()} - All right reserved by Ismail initiative.</small></p>
+    <p className="bg-base-200 text-base-content text-center"><small>© {new Date().getFullYear()} - All rights reserved by Ismail initiative.</small></p>
   </aside>
     </>
   );

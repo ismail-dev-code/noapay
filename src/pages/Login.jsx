@@ -2,10 +2,11 @@ import React, { use, useState } from "react";
 import Navbar from "../components/Navbar";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
+import Footer from "../components/Footer";
 
 const Login = () => {
   const [error, setError] = useState("");
-  const { signIn, signInWithGoogle } = use(AuthContext);
+  const { signIn, signInWithGoogle, setAmount } = use(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   const handleLogIn = (e) => {
@@ -16,6 +17,15 @@ const Login = () => {
     signIn(email, password)
       .then((result) => {
         const user = result.user;
+        const stored = JSON.parse(localStorage.getItem("credit"));
+       if(user){
+        if (stored) {
+          setAmount(stored);
+        } else {
+          setAmount(10000);
+          localStorage.setItem("credit", JSON.stringify(10000));
+        }
+       }
         alert("user log in successfully..");
         navigate(`${location.state ? location.state : "/"}`);
       })
@@ -28,6 +38,7 @@ const Login = () => {
   const handleGoogleLogin = () => {
     signInWithGoogle()
       .then((result) => {
+        localStorage.setItem("credit", JSON.stringify(10000));
         console.log(result);
         navigate(`${location.state ? location.state : "/"}`);
       })
@@ -37,7 +48,7 @@ const Login = () => {
     <>
       {" "}
       <Navbar></Navbar>
-      <div className="card bg-base-100 w-full mt-16 mx-auto max-w-sm shrink-0 shadow-2xl">
+      <div className="card bg-base-100 w-full my-16 mx-auto max-w-sm shrink-0 shadow-2xl">
         <div className="card-body">
           <h1 className="text-2xl font-bold">Log in to NoaPay</h1>
           <form onSubmit={handleLogIn}>
@@ -64,8 +75,12 @@ const Login = () => {
             >
               Login
             </button>
+            <p className="text-red-600">{error}</p>
           </form>
-          <button onClick={handleGoogleLogin} className="btn bg-white text-black border-[#e5e5e5]">
+          <button
+            onClick={handleGoogleLogin}
+            className="btn bg-white text-black border-[#e5e5e5]"
+          >
             <svg
               aria-label="Google logo"
               width="22"
@@ -103,6 +118,7 @@ const Login = () => {
           </p>
         </div>
       </div>
+      <Footer></Footer>
     </>
   );
 };

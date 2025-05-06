@@ -17,6 +17,8 @@ const googleProvider = new GoogleAuthProvider();
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const credits = JSON.parse(localStorage.getItem("credit"));
+  const [amount, setAmount] = useState(credits);
 
   const createUser = (email, password) => {
     setLoading(true);
@@ -58,6 +60,8 @@ const AuthProvider = ({ children }) => {
     setLoading,
     updateUser,
     signInWithGoogle,
+    amount,
+    setAmount,
   };
   return <AuthContext value={authData}>{children}</AuthContext>;
 };
