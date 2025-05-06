@@ -1,10 +1,12 @@
 import React from "react";
 import footerLogo from '../assets/noapay-logo.png'
+import { Link } from "react-router";
+import { FaFacebookSquare, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <>
-    <footer className="footer sm:footer-horizontal bg-base-200 text-base-content p-10 pb-3">
+    <footer className="footer grid md:grid-cols-3 grid-cols-2 lg:grid-cols-5  bg-base-200 text-base-content p-10 pb-3">
       <aside>
        <img src={footerLogo} alt="footerLogo" />
         <p>
@@ -35,6 +37,14 @@ const Footer = () => {
         <a className="link link-hover">Terms of Service</a>
         <a className="link link-hover">Privacy Policy</a>
         <a className="link link-hover">Security</a>
+      </nav>
+      <nav>
+        <h6 className="footer-title">Social Media</h6>
+        <div className="flex flex-row md:flex-col gap-2.5">
+        <Link target="_blank" to={"https://www.facebook.com/m.ismail.hossain24/"} className="link link-hover"><FaFacebookSquare size={35} className="text-success" /></Link>
+        <Link target="_blank" to={"https://www.linkedin.com/in/ismail-hossain24/"} className="link link-hover"><FaLinkedin size={35} className="text-success" /></Link>
+        <Link target="_blank" to={"https://www.instagram.com/m.ismailhossain24/"} className="link link-hover"><FaInstagramSquare size={35} className="text-success" /></Link>
+        </div>
       </nav>
       
     </footer>

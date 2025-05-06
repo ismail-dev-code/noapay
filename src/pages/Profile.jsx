@@ -28,62 +28,65 @@ const Profile = () => {
   };
 
   return (
-    <div className="flex justify-center items-center flex-col mt-8">
-      <div className="relative">
-        <img
-          className="rounded-full w-24 h-24"
-          src={updatedValue.photoURL}
-          alt=""
-        />
-        {edit ? (
-          ""
-        ) : (
-          <span
-            onClick={() => setEdit(true)}
-            className="absolute bottom-2 cursor-pointer  right-0"
-          >
-            <FaEdit className="text-success" size={30} />
-          </span>
-        )}
-      </div>
-      <h1 className="font-bold text-xl">Name: {updatedValue.name}</h1>
-      <p>Email: {auth.currentUser.email}</p>
-      {edit ? (
-        <div>
-          <form onSubmit={handleSubmit}>
-            <label className="label block">Name</label>
-            <input
-              type="name"
-              name="name"
-              className="input block"
-              placeholder="name"
-            />
-            <label className="label block">PhotoURL</label>
-            <input
-              type="photoURL"
-              name="photoURL"
-              className="input block"
-              placeholder="photoURL"
-            />
+    <div className="flex justify-center items-center flex-col my-12 px-4 md:px-8 lg:px-0">
+  <div className="relative">
+    <img
+      className="rounded-full w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 object-cover"
+      src={updatedValue.photoURL}
+      alt="User"
+    />
+    {!edit && (
+      <span
+        onClick={() => setEdit(true)}
+        className="absolute bottom-2 right-0 cursor-pointer"
+      >
+        <FaEdit className="text-success" size={24} />
+      </span>
+    )}
+  </div>
 
-            <button
-              type="submit"
-              className="btn btn-success block bg-primary text-white border-none mt-4"
-            >
-              Submit
-            </button>
-            <button
-              onClick={() => setEdit(false)}
-              className="btn btn-neutral block text-white border-none mt-4"
-            >
-              Cancel
-            </button>
-          </form>
-        </div>
-      ) : (
-        ""
-      )}
-    </div>
+  <h1 className="font-bold text-lg md:text-xl mt-4">Name: {updatedValue.name}</h1>
+  <p className="text-sm md:text-base">Email: {auth.currentUser.email}</p>
+
+  {edit && (
+    <form onSubmit={handleSubmit} className="w-full max-w-sm mt-4 space-y-3">
+      <div>
+        <label className="label block text-sm md:text-base">Name</label>
+        <input
+          type="text"
+          name="name"
+          className="input input-bordered w-full"
+          placeholder="Your name"
+        />
+      </div>
+
+      <div>
+        <label className="label block text-sm md:text-base">Photo URL</label>
+        <input
+          type="text"
+          name="photoURL"
+          className="input input-bordered w-full"
+          placeholder="Photo URL"
+        />
+      </div>
+
+      <button
+        type="submit"
+        className="btn btn-success w-full bg-primary text-white border-none"
+      >
+        Submit
+      </button>
+      <button
+        onClick={() => setEdit(false)}
+        type="button"
+        className="btn btn-neutral w-full text-white border-none"
+      >
+        Cancel
+      </button>
+    </form>
+  )}
+</div>
+
   );
 };
 
