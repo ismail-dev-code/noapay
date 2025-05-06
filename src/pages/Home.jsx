@@ -12,6 +12,7 @@ import { FaHandPointUp, FaLock } from "react-icons/fa";
 import { IoArrowRedoSharp } from "react-icons/io5";
 import { TbCoinTakaFilled } from "react-icons/tb";
 import { TiTick } from "react-icons/ti";
+import { Link } from "react-router";
 
 const Home = () => {
   return (
@@ -116,37 +117,46 @@ const Home = () => {
       </div>
 
       <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:p-0 p-4 my-12 md:my-24">
-  <div className="w-full md:w-1/2">
-    <img className="rounded-2xl w-full" src={slideImg2} alt="How NoaPay Works" />
-  </div>
-  <div className="w-full md:w-1/2">
-    <h1 className="text-3xl md:text-4xl font-bold mb-3">How does it work?</h1>
-    <p className="text-gray-500 text-base md:text-lg">
-      Using NoaPay is simple. Just sign in, add your bill details, and
-      make payments in a few quick steps. Track your history, get
-      reminders, and stay on top of all your bills — all in one place.
-    </p>
-    <ol className="list-inside text-gray-600 mt-4 space-y-4 text-base md:text-lg">
-      <li className="flex items-start gap-2">
-        <TiTick className="text-success mt-1" size={24} />
-        Sign up or log in to your NoaPay account.
-      </li>
-      <li className="flex items-start gap-2">
-        <TiTick className="text-success mt-1" size={24} />
-        Add your utility or service bill information.
-      </li>
-      <li className="flex items-start gap-2">
-        <TiTick className="text-success mt-1" size={24} />
-        Choose your preferred payment method and pay securely.
-      </li>
-      <li className="flex items-start gap-2">
-        <TiTick className="text-success mt-1" size={24} />
-        Receive instant confirmation and track your payment history anytime.
-      </li>
-    </ol>
-  </div>
-</div>
-
+        <div className="w-full md:w-1/2">
+          <img
+            className="rounded-2xl w-full"
+            src={slideImg2}
+            alt="How NoaPay Works"
+          />
+        </div>
+        <div className="w-full md:w-1/2">
+          <h1 className="text-3xl md:text-4xl font-bold mb-3">
+            How does it work?
+          </h1>
+          <p className="text-gray-500 text-base md:text-lg">
+            Using NoaPay is simple. Just sign in, add your bill details, and
+            make payments in a few quick steps. Track your history, get
+            reminders, and stay on top of all your bills — all in one place.
+          </p>
+          <ol className="list-inside text-gray-600 mt-4 space-y-4 text-base md:text-lg">
+            <li className="flex items-start gap-2">
+              <TiTick className="text-success mt-1" size={24} />
+              Sign up or log in to your NoaPay account.
+            </li>
+            <li className="flex items-start gap-2">
+              <TiTick className="text-success mt-1" size={24} />
+              Add your utility or service bill information.
+            </li>
+            <li className="flex items-start gap-2">
+              <TiTick className="text-success mt-1" size={24} />
+              Choose your preferred payment method and pay securely.
+            </li>
+            <li className="flex items-start gap-2">
+              <TiTick className="text-success mt-1" size={24} />
+              Receive instant confirmation and track your payment history
+              anytime.
+            </li>
+          </ol>
+          <Link to={"/register"} className="btn-success btn md:mt-6 mt-3 text-sm text-white">
+            Open a Free Account
+          </Link>
+        </div>
+      </div>
     </>
   );
 };

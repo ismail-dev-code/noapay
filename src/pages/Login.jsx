@@ -39,7 +39,7 @@ const Login = () => {
       <Navbar></Navbar>
       <div className="card bg-base-100 w-full mt-16 mx-auto max-w-sm shrink-0 shadow-2xl">
         <div className="card-body">
-          <h1 className="text-3xl font-bold">Login here!</h1>
+          <h1 className="text-2xl font-bold">Log in to NoaPay</h1>
           <form onSubmit={handleLogIn}>
             <label className="label">Email</label>
             <input

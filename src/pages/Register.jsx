@@ -39,7 +39,7 @@ const Register = () => {
   return (
     <div className="card bg-base-100 w-full mt-16 mx-auto max-w-sm shrink-0 shadow-2xl">
       <div className="card-body">
-        <h1 className="text-3xl font-bold">Register here!</h1>
+        <h1 className="text-2xl font-bold">Create your NoaPay account</h1>
         <form onSubmit={handleRegister}>
           <label className="label">Full Name</label>
           <input

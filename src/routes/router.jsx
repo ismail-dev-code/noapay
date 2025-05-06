@@ -7,6 +7,7 @@ import Register from "../pages/Register";
 import Login from "../pages/Login";
 import PrivateRoute from "../provider/PrivateRoute";
 import Loading from "../pages/Loading";
+import ErrorPage from "../components/ErrorPage";
 
 export const router = createBrowserRouter([
   {
@@ -45,4 +46,6 @@ export const router = createBrowserRouter([
     path: "/register",
     element: <Register />,
   },
+  { path: "/*", 
+    element: <ErrorPage></ErrorPage> },
 ]);
