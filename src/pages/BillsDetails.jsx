@@ -25,6 +25,7 @@ const BillsDetails = () => {
         setAmount(result);
         if (ids) {
           localStorage.setItem("paid", JSON.stringify([id, ...ids]));
+          alert("successfully paid");
         } else {
           localStorage.setItem("paid", JSON.stringify([id]));
         }

@@ -28,6 +28,13 @@ const Register = () => {
             setUser({ ...user, displayName: name, photoURL: photo });
             setAmount(10000);
             localStorage.setItem("credit", JSON.stringify(10000));
+            localStorage.setItem(
+              "user",
+              JSON.stringify({
+                name: user.displayName,
+                photoURL: user.photoURL,
+              })
+            );
             navigate("/");
           })
           .catch((error) => {

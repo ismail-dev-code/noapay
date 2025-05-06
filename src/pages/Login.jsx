@@ -17,15 +17,20 @@ const Login = () => {
     signIn(email, password)
       .then((result) => {
         const user = result.user;
+        console.log(user);
         const stored = JSON.parse(localStorage.getItem("credit"));
-       if(user){
-        if (stored) {
-          setAmount(stored);
-        } else {
-          setAmount(10000);
-          localStorage.setItem("credit", JSON.stringify(10000));
+        localStorage.setItem(
+          "user",
+          JSON.stringify({ name: user.displayName, photoURL: user.photoURL })
+        );
+        if (user) {
+          if (stored) {
+            setAmount(stored);
+          } else {
+            setAmount(10000);
+            localStorage.setItem("credit", JSON.stringify(10000));
+          }
         }
-       }
         alert("user log in successfully..");
         navigate(`${location.state ? location.state : "/"}`);
       })
@@ -39,6 +44,10 @@ const Login = () => {
     signInWithGoogle()
       .then((result) => {
         localStorage.setItem("credit", JSON.stringify(10000));
+        localStorage.setItem(
+          "user",
+          JSON.stringify({ name: result.user.displayName, photoURL: result.user.photoURL })
+        );
         console.log(result);
         navigate(`${location.state ? location.state : "/"}`);
       })
