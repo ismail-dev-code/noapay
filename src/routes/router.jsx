@@ -8,6 +8,7 @@ import Login from "../pages/Login";
 import PrivateRoute from "../provider/PrivateRoute";
 import Loading from "../pages/Loading";
 import ErrorPage from "../components/ErrorPage";
+import BillsDetails from "../pages/BillsDetails";
 
 export const router = createBrowserRouter([
   {
@@ -46,6 +47,12 @@ export const router = createBrowserRouter([
     path: "/register",
     element: <Register />,
   },
+  {
+    path: "/bills/:id",
+    element: <BillsDetails></BillsDetails>,
+    loader: () => fetch("/bills.json"),
+  },
   { path: "/*", 
-    element: <ErrorPage></ErrorPage> },
+    element: <ErrorPage></ErrorPage> ,
+  },
 ]);
