@@ -1,4 +1,4 @@
-import React, { use} from "react";
+import React, { use } from "react";
 import { Link, NavLink } from "react-router";
 import logoImg from "../assets/noapay-logo.png";
 import userImg from "../assets/user.png";
@@ -11,8 +11,6 @@ const MySwal = withReactContent(Swal);
 
 const Navbar = () => {
   const { user, logOut, amount } = use(AuthContext);
-  
-  
 
   const handleLogOut = () => {
     logOut()
@@ -41,16 +39,18 @@ const Navbar = () => {
         </NavLink>
       </li>
       <li>
-        <NavLink className={"mr-5"} to={"/profile"}>My Profile</NavLink>
+        <NavLink className={"mr-5"} to={"/profile"}>
+          My Profile
+        </NavLink>
       </li>
       <li>
         <NavLink to={"/contact-us"}>Contact Us</NavLink>
       </li>
     </>
   );
- 
+
   return (
-    <header className="border-b border-gray-300">
+    <header className="bg-linear-to-l from-success to-[rgba(139, 139, 139, 5)]">
       <div className="navbar lg:w-11/12 lg:mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
