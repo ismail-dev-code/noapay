@@ -71,6 +71,95 @@ const Home = () => {
           </Swiper>
         </div>
       </div>
+
+      <div className="text-center md:p-0 p-8 mt-8 md:mt-24">
+        <h1 className="md:text-4xl text-2xl font-bold mb-1.5 md:mb-3">
+          Trusted by Leading Organizations
+        </h1>
+        <p className="text-gray-500 md:mb-6 mb-3 w-full md:w-2/4 mx-auto">
+          We are honored to collaborate with a diverse group of trusted
+          organizations that rely on our platform to deliver reliable and
+          efficient services to their customers every day.
+        </p>
+        <div className="mx-auto w-full my-10 md:my-14">
+          <Swiper
+            modules={[Autoplay]}
+            spaceBetween={20}
+            autoplay={{ delay: 1000 }}
+            loop={true}
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 4,
+              },
+            }}
+          >
+            <SwiperSlide>
+              <div className="flex flex-col items-center justify-center p-6 shadow-md rounded-xl bg-white h-48">
+                <img
+                  src="https://i.ibb.co.com/99FRxG18/nesco.png"
+                  alt="Nesco"
+                  className="h-44 object-contain"
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="flex flex-col items-center justify-center p-6 shadow-md rounded-xl bg-white h-48">
+                <img
+                  src="https://i.ibb.co.com/fYYN5SkY/images.jpg"
+                  alt="credit_card_img"
+                  className="h-44 object-contain"
+                />
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="flex flex-col items-center justify-center p-6 shadow-md rounded-xl bg-white h-48">
+                <img
+                  src="https://i.ibb.co.com/YTLm93q6/wapda-s.jpg"
+                  alt="wapda"
+                  className="h-44 object-contain"
+                />
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="flex flex-col items-center justify-center p-6 shadow-md rounded-xl bg-white h-48">
+                <img
+                  src="https://i.ibb.co.com/5gFWQpbD/images.png"
+                  alt="Company"
+                  className="h-44 object-contain"
+                />
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="flex flex-col items-center justify-center p-6 shadow-md rounded-xl bg-white h-48">
+                <img
+                  src="https://i.ibb.co.com/spnxC0hh/wasa.png"
+                  alt="WASA"
+                  className="h-44 object-contain"
+                />
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="flex flex-col items-center justify-center p-6 shadow-md rounded-xl bg-white h-48">
+                <img
+                  src="https://i.ibb.co.com/HLxyzvr0/pdb-s.png"
+                  alt="PDB"
+                  className="h-44 object-contain"
+                />
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </div>
+      </div>
+
       <div className="text-center md:p-0 p-4 mt-8 md:mt-24">
         <h1 className="md:text-4xl text-3xl font-bold mb-1.5 md:mb-3">
           Why should you choose NoaPay?
@@ -237,6 +326,72 @@ const Home = () => {
               </div>
             </SwiperSlide>
           </Swiper>
+        </div>
+      </div>
+      <div className="text-center px-4 md:px-8 lg:px-20 my-4  md:my-24">
+        <h1 className="md:text-4xl text-2xl font-bold mb-1.5 md:mb-3">
+          Frequently Asked Questions
+        </h1>
+        <p className="text-gray-500 md:mb-6 mb-3 w-full md:w-3/4 lg:w-2/4 mx-auto">
+          Find answers to the most common questions about our services,
+          features, and how we can help you. If you don’t see your question
+          here, feel free to reach out to our support team.
+        </p>
+
+        <div className="text-left space-y-3 md:space-y-4 lg:space-y-5 max-w-3xl mx-auto mt-6 md:mt-12">
+          <div className="collapse collapse-plus bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-3" defaultChecked />
+            <div className="collapse-title font-semibold">
+              How do I create an account?
+            </div>
+            <div className="collapse-content text-sm">
+              Click the <span className="font-bold">"Register"</span> button in
+              the top right corner and follow the registration process.
+            </div>
+          </div>
+
+          <div className="collapse collapse-plus bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-3" />
+            <div className="collapse-title font-semibold">
+              Can I use the service on multiple devices?
+            </div>
+            <div className="collapse-content text-sm">
+              Yes, you can log in and use your account across multiple devices
+              at the same time without any issues.
+            </div>
+          </div>
+
+          <div className="collapse collapse-plus bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-3" />
+            <div className="collapse-title font-semibold">
+              How can I delete my account?
+            </div>
+            <div className="collapse-content text-sm">
+              If you wish to delete your account, please contact our support
+              team through the "Help & Support" section for assistance.
+            </div>
+          </div>
+
+          <div className="collapse collapse-plus bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-3" />
+            <div className="collapse-title font-semibold">
+              Do I need an internet connection to use the service?
+            </div>
+            <div className="collapse-content text-sm">
+              Yes, an active internet connection is required to access all
+              features and keep your data synced across devices.
+            </div>
+          </div>
+
+          <div className="collapse collapse-plus bg-base-100 border border-base-300">
+            <input type="radio" name="my-accordion-3" />
+            <div className="collapse-title font-semibold">
+              How do I update my profile information?
+            </div>
+            <div className="collapse-content text-sm">
+              Go to "My Profile" and click the "Edit Icon" to make changes.
+            </div>
+          </div>
         </div>
       </div>
     </>

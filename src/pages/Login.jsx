@@ -18,7 +18,7 @@ const Login = () => {
     signIn(email, password)
       .then((result) => {
         const user = result.user;
-       
+
         const stored = JSON.parse(localStorage.getItem("credit"));
         localStorage.setItem(
           "user",
@@ -46,9 +46,12 @@ const Login = () => {
         localStorage.setItem("credit", JSON.stringify(10000));
         localStorage.setItem(
           "user",
-          JSON.stringify({ name: result.user.displayName, photoURL: result.user.photoURL })
+          JSON.stringify({
+            name: result.user.displayName,
+            photoURL: result.user.photoURL,
+          })
         );
-       
+
         navigate(`${location.state ? location.state : "/"}`);
       })
       .catch((error) => toast.error(error));
@@ -65,6 +68,7 @@ const Login = () => {
             <input
               type="email"
               name="email"
+              required
               className="input"
               placeholder="Email"
             />
@@ -72,6 +76,7 @@ const Login = () => {
             <input
               type="password"
               name="password"
+              required
               className="input"
               placeholder="Password"
             />

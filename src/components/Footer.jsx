@@ -29,7 +29,7 @@ const Footer = () => {
         <a className="link link-hover">About Us</a>
         <a className="link link-hover">Contact</a>
         <a className="link link-hover">Careers</a>
-        <a className="link link-hover">Blog</a>
+        <a className="link link-hover">Help & Support</a>
       </nav>
 
       <nav>

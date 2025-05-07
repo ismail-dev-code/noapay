@@ -34,7 +34,7 @@ const Profile = () => {
       <div className="relative">
         <img
           className="rounded-full w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 object-cover"
-          src={updatedValue.photoURL}
+          src={updatedValue?.photoURL}
           alt="User"
         />
         {!edit && (
@@ -48,9 +48,9 @@ const Profile = () => {
       </div>
 
       <h1 className="font-bold text-lg md:text-xl mt-4">
-        Name: {updatedValue.name}
+        Name: {updatedValue?.name}
       </h1>
-      <p className="text-sm md:text-base">Email: {auth.currentUser.email}</p>
+      <p className="text-sm md:text-base">Email: {auth?.currentUser?.email}</p>
 
       {edit && (
         <form

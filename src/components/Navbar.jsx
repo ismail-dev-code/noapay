@@ -32,7 +32,10 @@ const Navbar = () => {
         </NavLink>
       </li>
       <li>
-        <NavLink to={"/profile"}>Profile</NavLink>
+        <NavLink className={"mr-5"} to={"/profile"}>My Profile</NavLink>
+      </li>
+      <li>
+        <NavLink to={"/contact-us"}>Contact Us</NavLink>
       </li>
     </>
   );
