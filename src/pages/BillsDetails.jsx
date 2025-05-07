@@ -10,7 +10,7 @@ const BillsDetails = () => {
   const { setAmount } = use(AuthContext);
   const ids = JSON.parse(localStorage.getItem("paid"));
   const filterValue = ids?.find((single) => single === id);
-  // console.log(bill);
+ 
   const handlePayBill = (amount) => {
     const credits = JSON.parse(localStorage.getItem("credit"));
     const result = Number(credits) - amount;

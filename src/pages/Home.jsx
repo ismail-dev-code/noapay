@@ -17,14 +17,14 @@ import { Link } from "react-router";
 const Home = () => {
   return (
     <>
-      <div className="flex flex-col md:flex-row items-center justify-between px-4 py-8 gap-6">
-        <div className="flex-1 text-center md:text-left">
+      <div className="mt-10 bg-linear-to-t from-success to-[#EFEFEF] rounded-2xl flex flex-col md:flex-row items-center justify-between px-4 py-8 gap-6">
+        <div className="flex-1 text-center md:text-left pl-2 md:pl-8">
           <h1 className="md:text-5xl text-3xl font-bold mb-2">
             NoaPay-{" "}
             <span className="font-normal text-primary">Pay Bills at Ease</span>
           </h1>
 
-          <p className="text-gray-500 mb-4">
+          <p className="text-gray-600 mb-4">
             <span className="font-bold">NoaPay</span> is your all-in-one digital
             platform to manage, track, and pay your bills — fast, secure, and
             hassle-free. Whether it's electricity, water, internet, or any other
@@ -119,7 +119,7 @@ const Home = () => {
       </div>
 
       <div className="flex flex-col md:flex-row justify-between items-center gap-8 md:p-0 p-4 my-12 md:my-24">
-        <div className="w-full md:w-1/2">
+        <div className="w-full md:w-1/2 bg-linear-to-t from-success to-[#EFEFEF] rounded-2xl">
           <img
             className="rounded-2xl w-full"
             src={slideImg2}
@@ -190,9 +190,9 @@ const Home = () => {
             }}
           >
             <SwiperSlide>
-              <div className="flex flex-col items-center justify-center space-y-2 p-6 shadow-md rounded-xl bg-white">
+              <div className="flex flex-col items-center justify-center p-6 shadow-md rounded-xl bg-white">
                 <FaQuoteLeft className="text-success text-center" size={40} />
-                <p className="text-gray-500 text-center">
+                <p className="mb-3 text-gray-500 text-center">
                   "NoaPay is a lifesaver! As a busy freelancer, it helps me stay
                   organized and pay on time without hassle."
                 </p>
@@ -202,9 +202,9 @@ const Home = () => {
             </SwiperSlide>
 
             <SwiperSlide>
-              <div className="flex flex-col items-center justify-center space-y-2 p-6 shadow-md rounded-xl bg-white">
+              <div className="flex flex-col items-center justify-center p-6 shadow-md rounded-xl bg-white">
                 <FaQuoteLeft className="text-success text-center" size={40} />
-                <p className="text-gray-500 text-center">
+                <p className="mb-3 text-gray-500 text-center">
                   "I love how NoaPay sends timely reminders. Now I’m always on
                   track with my utility payments."
                 </p>
@@ -214,9 +214,9 @@ const Home = () => {
             </SwiperSlide>
 
             <SwiperSlide>
-              <div className="flex flex-col items-center justify-center space-y-2 p-6 shadow-md rounded-xl bg-white">
+              <div className="flex flex-col items-center justify-center p-6 shadow-md rounded-xl bg-white">
                 <FaQuoteLeft className="text-success text-center" size={40} />
-                <p className="text-gray-500 text-center">
+                <p className="mb-3 text-gray-500 text-center">
                   "NoaPay made bill payments so easy and stress-free. The
                   interface is modern and simple."
                 </p>
@@ -226,9 +226,9 @@ const Home = () => {
             </SwiperSlide>
 
             <SwiperSlide>
-              <div className="flex flex-col items-center justify-center space-y-2 p-6 shadow-md rounded-xl bg-white">
+              <div className="flex flex-col items-center justify-center p-6 shadow-md rounded-xl bg-white">
                 <FaQuoteLeft className="text-success text-center" size={40} />
-                <p className="text-gray-500 text-center">
+                <p className="mb-3 text-gray-500 text-center">
                   "Great platform! Everything is smooth, from adding bill info
                   to making payments securely."
                 </p>

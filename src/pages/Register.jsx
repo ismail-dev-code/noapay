@@ -42,7 +42,6 @@ const Register = () => {
           });
       })
       .catch((error) => {
-        // const errorCode = error.code;
         const errorMessage = error.message;
         alert(errorMessage);
       });
@@ -50,7 +49,7 @@ const Register = () => {
   return (
     <>
       <Navbar></Navbar>
-      <div className="card bg-base-100 w-full my-16 mx-auto max-w-sm shrink-0 shadow-2xl">
+      <div className="card w-full my-16 mx-auto max-w-sm shrink-0 shadow-2xl bg-linear-to-b from-success to-[#EFEFEF]">
         <div className="card-body">
           <h1 className="text-2xl font-bold">Create your NoaPay account</h1>
           <form onSubmit={handleRegister}>
