@@ -340,7 +340,7 @@ const Home = () => {
 
         <div className="text-left space-y-3 md:space-y-4 lg:space-y-5 max-w-3xl mx-auto mt-6 md:mt-12">
           <div className="collapse collapse-plus bg-base-100 border border-base-300">
-            <input type="radio" name="my-accordion-3" defaultChecked />
+            <input type="radio" name="my-accordion-3" Checked />
             <div className="collapse-title font-semibold">
               How do I create an account?
             </div>

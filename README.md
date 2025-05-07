@@ -44,6 +44,18 @@
 - **Authentication**: Firebase Auth (Email/Password + Google)
 - **Hosting**: Firebase Hosting
 
+## 📦 NPM Packages Used
+
+![React Icons](https://img.shields.io/badge/React%20Icons-%5E4.10.1-blue.svg?logo=react)
+![Swiper](https://img.shields.io/badge/Swiper-%5E11.0.5-purple.svg?logo=swiper)
+![React Toastify](https://img.shields.io/badge/React%20Toastify-%5E9.1.3-orange.svg?logo=javascript)
+
+| Package            | Description                               | Link                                            |
+|--------------------|-------------------------------------------|-------------------------------------------------|
+| `react-icons`      | Popular icons for React projects          | [npm](https://www.npmjs.com/package/react-icons) |
+| `swiper`           | Modern mobile touch slider library        | [npm](https://www.npmjs.com/package/swiper)      |
+| `react-toastify`   | Toast notification system for React       | [npm](https://www.npmjs.com/package/react-toastify) |
+
 ## 🔐 Authentication
 
 - Email and Password Registration/Login
