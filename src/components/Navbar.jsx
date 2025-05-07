@@ -4,6 +4,10 @@ import logoImg from "../assets/noapay-logo.png";
 import userImg from "../assets/user.png";
 import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+
+const MySwal = withReactContent(Swal);
 
 const Navbar = () => {
   const { user, logOut, amount } = use(AuthContext);
@@ -13,7 +17,12 @@ const Navbar = () => {
   const handleLogOut = () => {
     logOut()
       .then(() => {
-        toast.error("you have successfully log out.");
+        MySwal.fire({
+          title: <p>Log Out Successfully.</p>,
+          icon: "error",
+          showConfirmButton: true,
+          timer: 3000,
+        });
       })
       .catch((error) => {
         toast.error(error);
