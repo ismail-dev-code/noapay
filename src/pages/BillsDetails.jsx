@@ -1,13 +1,16 @@
 import React, { use, useEffect, useState } from "react";
-import { useLoaderData, useParams } from "react-router";
+import { useLoaderData, useLocation, useNavigate, useParams } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
 import { TiTick } from "react-icons/ti";
+import { toast } from "react-toastify";
 
 const BillsDetails = () => {
   const data = useLoaderData();
   const { id } = useParams();
   const [bill, setBill] = useState({});
   const { setAmount } = use(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
   const ids = JSON.parse(localStorage.getItem("paid"));
   const filterValue = ids?.find((single) => single === id);
  
@@ -19,19 +22,20 @@ const BillsDetails = () => {
       const filterValue = ids?.find((single) => single === id);
 
       if (filterValue) {
-        alert("this bill already paid");
+        toast.info("This bill was successfully paid.");
       } else {
         localStorage.setItem("credit", JSON.stringify(result));
         setAmount(result);
         if (ids) {
           localStorage.setItem("paid", JSON.stringify([id, ...ids]));
-          alert("successfully paid");
+          toast.success("You have successfully paid the bill.");
+          navigate(`${location.state ? location.state : "/bills"}`);
         } else {
           localStorage.setItem("paid", JSON.stringify([id]));
         }
       }
     } else {
-      alert("dont have credit");
+      toast.warning("It looks like your credit balance is currently empty.");
     }
   };
   useEffect(() => {
@@ -62,7 +66,7 @@ const BillsDetails = () => {
           >
             {filterValue ? (
               <>
-                <span>This Bill Already Paid</span> <TiTick size={30} />
+                <span>Paid</span> <TiTick size={30} />
               </>
             ) : (
               "Pay Bill"

@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
 import Footer from "../components/Footer";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const [error, setError] = useState("");
@@ -17,7 +18,7 @@ const Login = () => {
     signIn(email, password)
       .then((result) => {
         const user = result.user;
-        console.log(user);
+       
         const stored = JSON.parse(localStorage.getItem("credit"));
         localStorage.setItem(
           "user",
@@ -31,11 +32,10 @@ const Login = () => {
             localStorage.setItem("credit", JSON.stringify(10000));
           }
         }
-        alert("user log in successfully..");
+        toast.success("you've log in successfully..");
         navigate(`${location.state ? location.state : "/"}`);
       })
       .catch((error) => {
-        // const errorCode = error.code;
         const errorMessage = error.message;
         setError(errorMessage);
       });
@@ -48,10 +48,10 @@ const Login = () => {
           "user",
           JSON.stringify({ name: result.user.displayName, photoURL: result.user.photoURL })
         );
-        console.log(result);
+       
         navigate(`${location.state ? location.state : "/"}`);
       })
-      .catch((error) => console.log(error));
+      .catch((error) => toast.error(error));
   };
   return (
     <>

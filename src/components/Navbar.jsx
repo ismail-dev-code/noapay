@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router";
 import logoImg from "../assets/noapay-logo.png";
 import userImg from "../assets/user.png";
 import { AuthContext } from "../provider/AuthProvider";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
   const { user, logOut, amount } = use(AuthContext);
@@ -12,10 +13,10 @@ const Navbar = () => {
   const handleLogOut = () => {
     logOut()
       .then(() => {
-        alert("you have successfully log out.");
+        toast.error("you have successfully log out.");
       })
       .catch((error) => {
-        alert(error);
+        toast.error(error);
       });
   };
   const links = (
