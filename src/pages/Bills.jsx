@@ -38,7 +38,7 @@ const Bills = () => {
               "Gas",
             ].map((value) => (
               <li>
-                <button onClick={() => handleFilter(value)}>{value}</button>
+                <button key={value} onClick={() => handleFilter(value)}>{value}</button>
               </li>
             ))}
           </ul>
