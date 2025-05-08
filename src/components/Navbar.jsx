@@ -10,7 +10,7 @@ import withReactContent from "sweetalert2-react-content";
 const MySwal = withReactContent(Swal);
 
 const Navbar = () => {
-  const { user, logOut, amount } = use(AuthContext);
+  const { user, logOut, amount, userProfile } = use(AuthContext);
 
   const handleLogOut = () => {
     logOut()
@@ -96,7 +96,9 @@ const Navbar = () => {
                 <div tabIndex={0} role="button" className="m-1">
                   <img
                     className="w-10 rounded-full cursor-pointer"
-                    src={`${user.photoURL ? user.photoURL : userImg}`}
+                    src={`${
+                      userProfile?.photoURL ? userProfile?.photoURL : userImg
+                    }`}
                     alt="Img"
                   />
                 </div>

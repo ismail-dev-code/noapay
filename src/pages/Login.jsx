@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import { toast } from "react-toastify";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
+import { Helmet } from "react-helmet-async";
 
 const MySwal = withReactContent(Swal);
 
@@ -87,6 +88,9 @@ const Login = () => {
 
   return (
     <>
+      <Helmet>
+        <title>NoaPay | Log In</title>
+      </Helmet>
       <Navbar />
       <div className="card bg-base-100 w-full my-16 mx-auto max-w-sm shrink-0 shadow-2xl bg-linear-to-b from-success to-[#EFEFEF]">
         <div className="card-body">

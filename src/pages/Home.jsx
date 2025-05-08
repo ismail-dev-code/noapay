@@ -6,17 +6,20 @@ import "swiper/css/pagination";
 import slideImg from "../assets/hero.jpg";
 import slideImg2 from "../assets/sld41.png";
 import slideImg3 from "../assets/slide2.jpg";
-
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { FaHandPointUp, FaLock, FaQuoteLeft } from "react-icons/fa";
 import { IoArrowRedoSharp } from "react-icons/io5";
 import { TbCoinTakaFilled } from "react-icons/tb";
 import { TiTick } from "react-icons/ti";
 import { Link } from "react-router";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   return (
     <>
+      <Helmet>
+        <title>NoaPay | Home</title>
+      </Helmet>
       <div className="mt-10 bg-linear-to-t from-success to-[#EFEFEF] rounded-2xl flex flex-col md:flex-row items-center justify-between px-4 py-8 gap-6">
         <div className="flex-1 text-center md:text-left pl-2 md:pl-8">
           <h1 className="md:text-5xl text-3xl font-bold mb-2">

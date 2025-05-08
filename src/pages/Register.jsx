@@ -4,6 +4,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 const Register = () => {
   const { createUser, setUser, updateUser, setAmount, signInWithGoogle } =
     use(AuthContext);
@@ -78,6 +79,9 @@ const Register = () => {
   };
   return (
     <>
+    <Helmet>
+            <title>NoaPay | Sign Up</title>
+          </Helmet>
       <Navbar></Navbar>
       <div className="card w-full my-16 mx-auto max-w-sm shrink-0 shadow-2xl bg-linear-to-b from-success to-[#EFEFEF]">
         <div className="card-body">
