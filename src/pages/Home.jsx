@@ -20,7 +20,7 @@ const Home = () => {
       <Helmet>
         <title>NoaPay | Home</title>
       </Helmet>
-      <div className="mt-10 bg-linear-to-t from-success to-[#EFEFEF] rounded-2xl flex flex-col md:flex-row items-center justify-between px-4 py-8 gap-6">
+      <div className="mt-10 bg-linear-to-t from-success to-[#EFEFEF] md:rounded-xl rounded-none flex flex-col md:flex-row items-center justify-between px-4 py-8 gap-6">
         <div className="flex-1 text-center md:text-left pl-2 md:pl-8">
           <h1 className="md:text-5xl text-3xl font-bold mb-2">
             NoaPay-{" "}
@@ -335,7 +335,7 @@ const Home = () => {
         <h1 className="md:text-4xl text-2xl font-bold mb-1.5 md:mb-3">
           Frequently Asked Questions
         </h1>
-        <p className="text-gray-500 md:mb-6 mb-3 w-full md:w-3/4 lg:w-2/4 mx-auto">
+        <p className="text-gray-500 md:mb-6 mb-3 w-full md:w-3/4 lg:w-2/3 mx-auto">
           Find answers to the most common questions about our services,
           features, and how we can help you. If you don’t see your question
           here, feel free to reach out to our support team.
