@@ -50,7 +50,7 @@ const Navbar = () => {
   );
 
   return (
-    <header className="bg-linear-to-l from-success to-[rgba(139, 139, 139, 5)]">
+    <header className="sticky top-0 z-50 shadow-2xl bg-white">
       <div className="navbar lg:w-11/12 lg:mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
