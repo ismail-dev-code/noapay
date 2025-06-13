@@ -35,7 +35,7 @@ const Home = () => {
             away.
           </p>
 
-          <Link to={"/bills"} className="btn bg-primary text-white">
+          <Link to={"/bills"} className="btn bg-primary border-none text-white">
             Bills
           </Link>
         </div>
@@ -45,7 +45,7 @@ const Home = () => {
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={30}
             slidesPerView={1}
-            navigation
+            // navigation
             pagination={{ clickable: true }}
             autoplay={{ delay: 3000 }}
             loop={true}

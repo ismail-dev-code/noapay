@@ -9,6 +9,7 @@ import PrivateRoute from "../provider/PrivateRoute";
 import Loading from "../pages/Loading";
 import ErrorPage from "../components/ErrorPage";
 import BillsDetails from "../pages/BillsDetails";
+import CurrencyConverter from "../utilities/CurrencyConverter";
 
 export const router = createBrowserRouter([
   {
@@ -19,15 +20,12 @@ export const router = createBrowserRouter([
         index: true,
         element: <Home />,
       },
+
       {
         path: "/bills",
         loader: () => fetch("/bills.json"),
         hydrateFallbackElement: <Loading />,
-        element: (
-          <PrivateRoute>
-            <Bills />
-          </PrivateRoute>
-        ),
+        element: <Bills />,
       },
       {
         path: "/bills/:id",
@@ -48,6 +46,10 @@ export const router = createBrowserRouter([
         ),
       },
     ],
+  },
+  {
+    path: "/currency-converter",
+    element: <CurrencyConverter />,
   },
   {
     path: "/login",

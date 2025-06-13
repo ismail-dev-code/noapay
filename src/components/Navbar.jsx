@@ -28,6 +28,7 @@ const Navbar = () => {
         toast.error(error);
       });
   };
+
   const links = (
     <>
       <li>
@@ -46,13 +47,18 @@ const Navbar = () => {
         </NavLink>
       </li>
       <li>
-        <NavLink to={"/contact-us"}>Contact Us</NavLink>
+        <NavLink className={"mr-5"} to={"/currency-converter"}>
+          Currency Converter
+        </NavLink>
+      </li>
+      <li>
+        <NavLink className={"mr-5"} to={"/contact-us"}>Contact Us</NavLink>
       </li>
     </>
   );
 
   return (
-    <header className="sticky top-0 z-50 shadow-2xl bg-white text-black">
+    <header className="sticky top-0 z-50 shadow-2xl bg-[linear-gradient(to_right,_#2fefb9,_#1dcdbc)] text-black">
       <div className="navbar lg:w-11/12 lg:mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
@@ -64,13 +70,12 @@ const Navbar = () => {
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
-                {" "}
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
                   d="M4 6h16M4 12h8m-8 6h16"
-                />{" "}
+                />
               </svg>
             </div>
             <ul
@@ -88,57 +93,60 @@ const Navbar = () => {
             />
           </Link>
         </div>
+
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
-        <div className="navbar-end">
-          
-          <div className="nav-btn flex gap-5">
-            {user ? (
-              <div className="dropdown dropdown-end">
-                <div tabIndex={0} role="button" className="m-1">
-                  <img
-                    className="w-10 rounded-full cursor-pointer"
-                    src={`${
-                      userProfile?.photoURL ? userProfile?.photoURL : userImg
-                    }`}
-                    alt="Img"
-                  />
-                </div>
 
-                <ul
-                  tabIndex={0}
-                  className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
-                >
-                  <li>
-                    <button>Credits: {amount}</button>
-                  </li>
-                  <li>
-                    <button onClick={handleLogOut}>Logout</button>
-                  </li>
-                </ul>
+        <div className="navbar-end flex items-center gap-4">
+          {user ? (
+            <div className="dropdown dropdown-end">
+              <div tabIndex={0} role="button" className="m-1">
+                <img
+                  className="w-10 rounded-full cursor-pointer"
+                  src={userProfile?.photoURL || userImg}
+                  alt="User"
+                />
               </div>
-            ) : (
-              <>
-                <Link to={"/login"} className="btn text-white btn-success">
-                  Login
-                </Link>
-                <Link to={"/register"} className="btn btn-success text-white">
-                  Register
-                </Link>
-                
-              </>
-            )}
-          </div>
-          <button className="pl-4">
-                  <input
-                    type="checkbox"
-                    value="dark"
-                    className="toggle theme-controller mr-6"
-                    checked={theme === "dark"}
-                    onChange={(e) => toggleTheme(e.target.checked)}
-                  />
-                </button>
+
+              <ul
+                tabIndex={0}
+                className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
+              >
+                <li>
+                  <button>Credits: {amount}</button>
+                </li>
+                <li>
+                  <button onClick={handleLogOut}>Logout</button>
+                </li>
+              </ul>
+            </div>
+          ) : (
+            <>
+              <Link
+                to="/login"
+                className="px-5 py-2 rounded-xl bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300"
+              >
+                Login
+              </Link>
+              <Link
+                to="/register"
+                className="px-5 py-2 rounded-xl bg-gradient-to-r from-teal-500 to-green-600 text-white font-semibold shadow-md hover:shadow-lg transition-all duration-300"
+              >
+                Register
+              </Link>
+            </>
+          )}
+
+          <label className="pl-4">
+            <input
+              type="checkbox"
+              value="dark"
+              className="toggle theme-controller mr-6"
+              checked={theme === "dark"}
+              onChange={(e) => toggleTheme(e.target.checked)}
+            />
+          </label>
         </div>
       </div>
     </header>
