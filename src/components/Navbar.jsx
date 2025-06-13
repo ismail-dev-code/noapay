@@ -6,11 +6,13 @@ import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
+import useTheme from "../utilities/useTheme";
 
 const MySwal = withReactContent(Swal);
 
 const Navbar = () => {
   const { user, logOut, amount, userProfile } = use(AuthContext);
+  const { theme, toggleTheme } = useTheme();
 
   const handleLogOut = () => {
     logOut()
@@ -50,7 +52,7 @@ const Navbar = () => {
   );
 
   return (
-    <header className="sticky top-0 z-50 shadow-2xl bg-white">
+    <header className="sticky top-0 z-50 shadow-2xl bg-white text-black">
       <div className="navbar lg:w-11/12 lg:mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
@@ -90,6 +92,7 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end">
+          
           <div className="nav-btn flex gap-5">
             {user ? (
               <div className="dropdown dropdown-end">
@@ -123,9 +126,19 @@ const Navbar = () => {
                 <Link to={"/register"} className="btn btn-success text-white">
                   Register
                 </Link>
+                
               </>
             )}
           </div>
+          <button className="pl-4">
+                  <input
+                    type="checkbox"
+                    value="dark"
+                    className="toggle theme-controller mr-6"
+                    checked={theme === "dark"}
+                    onChange={(e) => toggleTheme(e.target.checked)}
+                  />
+                </button>
         </div>
       </div>
     </header>
