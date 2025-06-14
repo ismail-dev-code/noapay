@@ -1,4 +1,4 @@
-import { StrictMode } from "react";
+
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import { router } from "./routes/router.jsx";
@@ -8,12 +8,10 @@ import { ToastContainer } from "react-toastify";
 import { HelmetProvider } from "react-helmet-async";
 
 createRoot(document.getElementById("root")).render(
-  
-    <HelmetProvider>
+  <HelmetProvider>
     <AuthProvider>
       <ToastContainer position="top-center" />
       <RouterProvider router={router} />
     </AuthProvider>
-    </HelmetProvider>
-  
+  </HelmetProvider>
 );
