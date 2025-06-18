@@ -6,20 +6,26 @@ const ErrorPage = () => {
   return (
     <>
       <Helmet>
-        <title>NoaPay | Unknown</title>
+        <title>NoaPay | 404 - Page Not Found</title>
+        <meta name="description" content="The page you are looking for does not exist on NoaPay." />
       </Helmet>
-      <div className="min-h-screen flex items-center justify-center bg-base-200 text-center p-4">
-        <div className="max-w-md">
-          <h1 className="text-6xl font-bold text-error">404</h1>
-          <p className="text-xl font-semibold mt-4">Oops! Page Not Found</p>
-          <p className="mt-2 text-base-content/70">
-            The page you’re looking for doesn’t exist or has been moved.
+
+      <main className="min-h-screen flex items-center justify-center bg-base-200 text-center p-6">
+        <section className="max-w-lg">
+          <h1 className="text-7xl font-extrabold text-error">404</h1>
+          <h2 className="text-2xl font-semibold mt-4">Page Not Found</h2>
+          <p className="mt-3 text-base-content/80">
+            Sorry, the page you’re looking for doesn’t exist, has been moved,
+            or the URL might be incorrect.
           </p>
-          <Link to="/" className="btn mt-4 btn-success text-white md:mb-16">
-            Go to Home
+          <Link
+            to="/"
+            className="btn btn-success mt-6 text-white px-6 py-2 rounded-lg shadow-md transition hover:brightness-110"
+          >
+            Return to Homepage
           </Link>
-        </div>
-      </div>
+        </section>
+      </main>
     </>
   );
 };
