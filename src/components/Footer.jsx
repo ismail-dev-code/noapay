@@ -40,7 +40,7 @@ const Footer = () => {
 
           <nav>
             <h6 className="footer-title">Legal</h6>
-            <a className="link link-hover">Terms of Service</a>
+            <a className="link link-hover">Terms and Conditions</a>
             <a className="link link-hover">Privacy Policy</a>
             <a className="link link-hover">Security</a>
           </nav>
